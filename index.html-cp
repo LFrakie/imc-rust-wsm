@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>IMC Rust + WebAssembly</title>
+  </head>
+  <body>
+    <h1>IMC Rust + WebAssembly</h1>
+    <p>
+      Introduce tu peso y altura para calcular tu IMC:
+      <br>
+      Peso: <input type="number" id="peso">
+      <br>
+      Altura: <input type="number" id="altura">
+      <br>
+      <button onclick="calcularIMC()">Calcular</button>
+    </p>
+    <p id="resultado"></p>
+
+    <script type="module">
+      import init, { calcular_imc } from './pkg/imc_rust.js';
+
+      async function run() {
+        await init();
+
+        var aff = calcular_imc(50, 60);
+        console.log(aff)
+        
+        const peso = document.getElementById('peso');
+        const altura = document.getElementById('altura');
+        const resultado = document.getElementById('resultado');
+
+        function calcularIMC() {
+	  console.log("asdasd xddd");
+//          const p = parseFloat(peso.value);
+//          const a = parseFloat(altura.value);
+//          const imc = calcular_imc(p, a);
+//          resultado.innerHTML = `Tu IMC es: ${imc.toFixed(2)}`;
+        }
+      }
+
+      run();
+    </script>
+  </body>
+</html>
+
