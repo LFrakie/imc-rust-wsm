@@ -1,0 +1,17 @@
+{
+  "name": "imc-rust",
+  "collaborators": [
+    "LFrakie <randymas15@hotmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "imc_rust_bg.wasm",
+    "imc_rust.js",
+    "imc_rust.d.ts"
+  ],
+  "module": "imc_rust.js",
+  "types": "imc_rust.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
